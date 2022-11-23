@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+
+  "name": "yt-d",
+  "version": "0.0.1",
+  "icons": {
+    "64": "img/icon.png"
+  },
+
+  "host_permissions": ["https://www.youtube.com/"],
+
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://yt-d.vercel.app/"],
+      "js": ["inject.js"]
+    }
+  ]
+}
